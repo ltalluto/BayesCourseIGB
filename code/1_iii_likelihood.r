@@ -23,12 +23,12 @@ ll_count2 <- function(musize, n) {
 }
 
 res1 <- optim(5, ll_count1, n=dat$n, lower=0, upper=max(dat$n), method='Brent',control=list(fnscale=-1))
-res2 <- optim(c(5, 5), ll_count2, n=dat$ncontrol=list(fnscale=-1))
+res2 <- optim(c(5, 5), ll_count2, n=dat$n, control=list(fnscale=-1))
 
 plot(xx, sapply(xx, nll_count1, n=dat$n) , type='l', col='#0066cc', bty='n', xlab=expression(lambda), ylab="Negative Log Likelihood", lwd=3.5)
 
 
-sim1 <- rpois(nrow(dat), res1$par)
+	sim1 <- rpois(nrow(dat), res1$par)
 sim2 <- rnbinom(nrow(dat), mu=res2$par[1], size=res2$par[2])
 
 par(mfrow=c(1,2))
