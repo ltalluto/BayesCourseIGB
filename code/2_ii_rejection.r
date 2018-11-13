@@ -25,5 +25,4 @@ plt <- hist(y)
 plot(plt, freq=F, main="", ylim=c(0, max(plt$density, yy)))
 lines(xx,yy , lwd=3.5, col="#c96840")
 
-system.time(rej_norm(1000))
-system.time(rnorm(1000, 4, 2))
+system.time(rej_norm(10000))/system.time(rnorm(10000, 4, 2))

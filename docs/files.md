@@ -6,6 +6,9 @@
 
 [trees.rds](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/data/trees.rds): A dataset of recruitment and mortality for trees in eastern North America.
 
+## Other Files
+[Stan manual](http://mc-stan.org/users/documentation/)
+
 ## Lecture Notes
 
 ### Day 1
@@ -19,6 +22,12 @@
 [i. Applying Bayes' Theorem](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day2/2_i_applied_bayes.pdf)
 
 [ii. Introduction to Stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day2/2_ii_intro_stan.pdf)
+
+### Day 3
+[i. Best Practices](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day3/3_i_mcmc_best_practices.pdf)
+
+[ii. Bayesian GLMs](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day3/3_ii_bayesian_glms.pdf)
+
 
 ## Sample Code
 
@@ -34,5 +43,19 @@
 [rejection.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/2_ii_rejection.r) (Rejection sampling algorithm)
 
 [metropolis.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/2_iii_metropolis.r) (Metropolis-hastings algorithm)
+
+[metropolis_simple.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/2_iiia_metropolis_simple.r) (Simpler Metropolis-hastings implementation)
+
+### Day 3
+[mcmc.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_i_mcmc.r) 
+(MCMC Package)
+
+[trees.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_ii_trees.r) 
+[trees.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_ii_trees.stan) (Intro to Stan code)
+
+[regression_figs.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iii_regression_figs.r) (Code for regression slides)
+
+[poisson_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson_glm.r) 
+[poisson_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson_glm.stan) (Poisson Regression)
 
 
