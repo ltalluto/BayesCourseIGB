@@ -5,7 +5,9 @@ library(bayesplot)
 trees <- readRDS("data/trees.rds")
 dat <- trees[grepl("TSU-CAN", species) & year == 2005 & n > 0]
 
-model <- stan("code/3_ii_trees.stan", data = list(n = nrow(dat), died = dat$died, ntrees = dat$n))
+stan_data <- list(n = nrow(dat), died = dat$died, ntrees = dat$n)
+model <- stan("code/3_ii_trees.stan", data = stan_data, chains=1,
+	iter = 2000)
 
 # some functions to play with
 mcmc_trace(as.array(model))

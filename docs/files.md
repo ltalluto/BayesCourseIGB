@@ -55,7 +55,7 @@
 
 [regression_figs.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iii_regression_figs.r) (Code for regression slides)
 
-[poisson_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson_glm.r) 
-[poisson_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson_glm.stan) (Poisson Regression)
+[poisson_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson.r) 
+[poisson_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson.stan) (Poisson Regression)
 
 

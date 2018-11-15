@@ -18,4 +18,8 @@ log_lik <- function(alpha, beta, sigma, x, y) {
 library(rstan)
 model <- stan("code/3_iii_regression_simple.stan", 
 	data = list(x = x, y = y, n = length(x)), chains=1, iter=2000)
-colMeans(as.matrix(model, pars=c('alpha', 'bet', 'sigma')))
+
+samples <- as.matrix(model, pars=c('alpha', 'bet', 'sigma'))
+colMeans(samples)
+
+hist(samples[,1])
