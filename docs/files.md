@@ -28,6 +28,9 @@
 
 [ii. Bayesian GLMs](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day3/3_ii_bayesian_glms.pdf)
 
+### Day 4
+[i. Model Comparison](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day4/4_i_model_comparison.pdf)
+
 
 ## Sample Code
 
