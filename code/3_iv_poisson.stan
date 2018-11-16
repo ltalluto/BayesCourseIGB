@@ -16,3 +16,7 @@ model {
 	intercept ~ normal(0, 50);
 	slope ~ normal(0,30);
 }
+generated quantities {
+	int yhat [n];
+	yhat = poisson_rng(lambda);
+}
