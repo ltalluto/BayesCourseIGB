@@ -31,6 +31,9 @@
 ### Day 4
 [i. Model Comparison](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day4/4_i_model_comparison.pdf)
 
+### Day 5
+[i. Laplace Approximation](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day5/5_i_laplace.pdf)
+
 
 ## Sample Code
 
@@ -60,5 +63,10 @@
 
 [poisson_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson.r) 
 [poisson_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson.stan) (Poisson Regression)
+
+[nbinom_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_nbinom.stan) (Negative Binomial Regression)
+
+### Day 5
+[laplace.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/5_i_laplace.r) (Negative Binomial Regression)
 
 
