@@ -40,6 +40,6 @@ Most days will consist of a mixture of lecture, individual coding practise, and 
 | Tuesday 19   | Maximum Likelihood<br/>Applied Bayesian Methods<br/> MCMC<br/> | Writing a likelihood function<br/> | Develop project ideas and outline<br/>Choose model structure<br/>Discuss likelihood/priors
 | Wednesday 20 | Metropolis-Hastings<br/> Intro to Stan<br/> Multivariate Bayesian models<br/> Prior choice<br/>Metropolis within Gibbs<br/> GLMs| Univariate Metropolis sampler<br/> Metropolis within Gibbs<br/>Simple Stan models| Develop likelihood and priors for your project
 | Thursday 21  | | | Coding your project (on your own)
-| Friday 22    | Hierarchical models | Advanced models in Stan | Working on projects
+| Friday 22    | GLMs <br/> Laplace Approximation <br/> Hierarchical models | Advanced models | Working on projects
 | Monday 25    | Model evaluation <br/> Diagnostics <br/> Model comparison  | Visualisation using `bayesplot` <br/>wAIC in Stan | Work on projects/presentations |
 | Tuesday 26    | Additional topics (on-demand) | | Presentations |
