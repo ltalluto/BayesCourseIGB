@@ -23,10 +23,10 @@ Course files will be added as the course progresses.
 
 
 ### Tuesday 19
-[i. Applying Bayes' Theorem](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day2/2_i_applied_bayes.pdf)
+[i. Applying Bayes' Theorem](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/19_tuesday/2_i_applied_bayes.pdf)
 
 ### Wednesday 20
-[i. Introduction to Stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day2/2_ii_intro_stan.pdf)
+[i. Introduction to Stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/20_wednesday/3_i_intro_stan.pdf)
 
 <!--
 [i. Best Practices](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day3/3_i_mcmc_best_practices.pdf)

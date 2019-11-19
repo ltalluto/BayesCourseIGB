@@ -3,16 +3,21 @@ trees <- readRDS("data/trees.rds")
 dat <- trees[grepl("TSU-CAN", species) & year == 2005 & n > 0]
 
 lik_func <- function(theta, n, k) {
-	sum(dbinom(n, k, theta, log=TRUE))
+	sum(dbinom(k, n, theta, log=TRUE))
 }
 
-optim(0.5, lik_func, n=dat$died, k=dat$n, method="Brent", lower=0, upper=1, control=list(fnscale=-1))
+
+
+optim(0.5, lik_func, k=dat$died, n=dat$n, method="Brent", lower=0, upper=1, control=list(fnscale=-1))
 
 par(mar=c(4.5,4.5,0.2,0.2))
-plot(seq(0,1,0.01), sapply(seq(0,1,0.01), lik_func, n=dat$died, k=dat$n), type='l', col='#0066cc', bty='n', xlab=expression(theta), ylab="Log Likelihood", lwd=3.5)
+plot(seq(0,1,0.01), sapply(seq(0,1,0.01), lik_func, k=dat$died, n=dat$n), type='l', col='#0066cc', bty='n', xlab=expression(theta), ylab="Log Likelihood", lwd=3.5)
 abline(v=0.147293, lty=2)
 abline(h=lik_func(0.147293, n=dat$died, k=dat$n), lty=2)
-text(0.147293, 4000, expression(paste(theta, "=", "0.147")), pos=4)
+text(0.147293, -4000, expression(paste(theta, "=", "0.147")), pos=4)
+
+
+
 
 ll_count1 <- function(lambda, n) {
 	sum(dpois(n, lambda, log=TRUE))
