@@ -69,9 +69,9 @@ Course files will be added as the course progresses.
 [trees.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_i_trees.stan) (Intro to Stan code)
 
 ### Friday 22
-[stan_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/4_ii_stan_glm.r) 
+[stan_glm.r](https://raw.githubusercontent.com/mtalluto/BayesCourseIGB/master/code/4_ii_stan_glm.r) 
 
-[stan_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/4_ii_stan_glm.stan) (GLM in Stan)
+[stan_glm.stan](hhttps://raw.githubusercontent.com/mtalluto/BayesCourseIGB/master/code/4_ii_stan_glm.stan) (GLM in Stan)
 
 
 <!--
