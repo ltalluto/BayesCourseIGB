@@ -124,14 +124,13 @@ log_posterior <- function(params, data) {
 }
 
 
-
 # original code for generating the data
 ## s <- sample(1:245, 10)
 
 # the data we use in class
 s <- c(147, 126, 183, 88, 9, 203, 16, 10, 112, 205)
 N_est <- 1400
-data <- list(s = s, nmin = max(s), nmax = 2 * N_est)
+data <- list(s = s, nmin = 1, nmax = 2 * N_est)
 
 data_max <- data
 data_max$s <- max(s)
@@ -176,12 +175,12 @@ posterior <- exp(sapply(N_proposals, log_posterior, data = data))
 
 ## remember that the posterior is unnormalized
 ## in this case, we can normalize it because we have captured every possible value
-posterior <- posterior/sum(posterior)
+posterior <- posterior/sum(posterior, na.rm = TRUE)
 
 par(mfrow=c(1,3))
-plot(N_proposals, liklihood, type='l', col='blue', lwd=2, xlab="N", ylab="Likelihood")
-plot(N_proposals, prior, type='l', col='red', lwd=2, xlab="N", ylab="Prior Probability")
-plot(N_proposals, posterior, type='l', col='purple', lwd=2, xlab="N", ylab="Posterior Probability")
+plot(N_proposals, liklihood, type='l', col='blue', lwd=2, xlab="N", ylab="Likelihood", xlim=c(1,400))
+plot(N_proposals, prior, type='l', col='red', lwd=2, xlab="N", ylab="Prior Probability", xlim=c(1,400))
+plot(N_proposals, posterior, type='l', col='purple', lwd=2, xlab="N", ylab="Posterior Probability", xlim=c(1,400))
 
 
 

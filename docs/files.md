@@ -28,11 +28,12 @@ Course files will be added as the course progresses.
 ### Wednesday 20
 [i. Introduction to Stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/20_wednesday/3_i_intro_stan.pdf)
 
+### Friday 22
+[i. Best Practices](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/22_friday/4_i_mcmc_best_practices.pdf)
+
+[ii. Bayesian GLMs](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/22_friday/4_ii_bayesian_glms.pdf)
+
 <!--
-[i. Best Practices](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day3/3_i_mcmc_best_practices.pdf)
-
-[ii. Bayesian GLMs](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day3/3_ii_bayesian_glms.pdf)
-
 ### Day 4
 [i. Model Comparison](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day4/4_i_model_comparison.pdf)
 
@@ -67,13 +68,16 @@ Course files will be added as the course progresses.
 
 [trees.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_i_trees.stan) (Intro to Stan code)
 
+### Friday 22
+[stan_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/4_ii_stan_glm.r) 
+
+[stan_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/4_ii_stan_glm.stan) (GLM in Stan)
+
+
 <!--
 [regression_figs.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iii_regression_figs.r) (Code for regression slides)
 
-[poisson_glm.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson.r) 
-[poisson_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_poisson.stan) (Poisson Regression)
 
-[nbinom_glm.stan](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iv_nbinom.stan) (Negative Binomial Regression)
 
 ### Day 5
 [laplace.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/5_i_laplace.r) (Negative Binomial Regression)

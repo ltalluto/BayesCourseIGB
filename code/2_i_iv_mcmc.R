@@ -28,7 +28,16 @@ colnames(samples) <- c("logmu", "logsig")
 mcmc_trace(samples)
 
 ## check the log mean and log sd against the original data
-cbind(colMeans(samples), c(log(mean(dat$annual_mean_temp)), log(sd(dat$annual_mean_temp))))
+ln_mean <- function(lmu, lsig) exp(lmu + lsig^2/2)
+ln_sd <- function(lmu, lsig)
+	sqrt((exp(lsig^2) - 1) * exp(2 * lmu + lsig^2))
+
+cbind(samples = c(median(ln_mean(samples[,1], samples[,2])),
+	median(ln_sd(samples[,1], samples[,2]))), 
+	data = c(mean(dat$annual_mean_temp), 
+		sd(dat$annual_mean_temp)))
+
+	
 
 
 xx <- seq(2, 16, 0.01)
