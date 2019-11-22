@@ -8,7 +8,7 @@ trees <- readRDS("data/trees.rds")
 dat <- trees[grepl("TSU-CAN", species) & year == 2005 & n > 0]
 
 log_posterior <- function(pars, X) {
-	mulog <- exp(pars[1]) ## we need to ensure these parameters are positive
+	mulog <- pars[1] ## we need to ensure these parameters are positive
 	siglog <- exp(pars[2]) ## we need to ensure these parameters are positive
 	sum(dlnorm(X, mulog, siglog, log=TRUE)) + ## likelihood
 		dnorm(mulog, log(15.8), log(3), log=TRUE) + ## prior on the average of log(average temperature), based on global average temperature
@@ -23,7 +23,8 @@ model <- metrop(model, nbatch=2000, scale=c(0.03,0.05), X=dat$annual_mean_temp)
 model$accept
 
 model <- metrop(model, nbatch=20000, scale=c(0.03,0.05), X=dat$annual_mean_temp)
-samples <- exp(model$batch) ## because we actually tracked the log of the parameters
+samples <- model$batch
+samples[,2] <- exp(samples[,2]) ## because we actually tracked the log of the sd
 colnames(samples) <- c("logmu", "logsig")
 mcmc_trace(samples)
 
