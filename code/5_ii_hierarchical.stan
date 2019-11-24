@@ -1,36 +1,35 @@
 data {
-	int<lower=0> n; // number of data points
-	int<lower=0> nsp; // number of species
+	int<lower=1> n; // number of data points
+	int<lower=1> k; // number of groups
 	int<lower=0> ntrees[n];
-	int<lower=1, upper=nsp> species [n]; // array of species IDs
+	int<lower=0> died[n];
+	int<lower=1, upper=k> group_id [n]; // array of group IDs
 	vector [n] temperature;
 }
 parameters {
-	vector [nsp] intercept; // one intercept per species
-	vector [nsp] slope; // one slope per species
-	real int_mean;
-	real slope_mean;
+	vector [k] intercepts; // one intercept per year
+	vector [k] slopes; // one slope per year
+	real int_mu;
+	real slope_mu;
 	real<lower=0> int_sd;
 	real<lower=0> slope_sd;
 }
 transformed parameters {
-	vector [n] lambda;
+	vector [n] prob;
 	for(i in 1:n) {
-		lambda[i] = exp(intercept[species[i]] + slope[species[i]] * temperature[i]);
+		prob[i] = inv_logit(intercepts[group_id[i]] + slopes[group_id[i]] * temperature[i]);
 	}
 	
 }
 model {
-	ntrees ~ poisson(lambda);
-	intercept ~ normal(int_mean, int_sd);
-	slope ~ normal(slope_mean, slope_sd);
+	died ~ binomial(ntrees, prob);
+	intercepts ~ normal(int_mu, int_sd);
+	slopes ~ normal(slope_mu, slope_sd);
 
-	int_mean ~ normal(0, 50);
-	slope_mean ~ normal(0, 50);
-	int_sd ~ exponential(0.1);
-	slope_sd ~ exponential(0.1);
-}
-generated quantities {
-	int yhat [n];
-	yhat = poisson_rng(lambda);
+	# hyperpriors
+	# these are quite vague, as it is hard to be sure what makes sense
+	int_mu ~ normal(0, 20);
+	slope_mu ~ normal(0, 20);
+	int_sd ~ normal(0, 20);
+	slope_sd ~ normal(0, 20);
 }
