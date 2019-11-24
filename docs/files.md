@@ -33,12 +33,12 @@ Course files will be added as the course progresses.
 
 [ii. Bayesian GLMs](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/22_friday/4_ii_bayesian_glms.pdf)
 
+### Monday 25
+[i. Laplace Approximation](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/25_monday/5_i_laplace.pdf)
+
 <!--
 ### Day 4
 [i. Model Comparison](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day4/4_i_model_comparison.pdf)
-
-### Day 5
-[i. Laplace Approximation](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/lectures/day5/5_i_laplace.pdf)
 -->
 
 ## Sample Code
@@ -71,15 +71,8 @@ Course files will be added as the course progresses.
 ### Friday 22
 [stan_glm.r](https://raw.githubusercontent.com/mtalluto/BayesCourseIGB/master/code/4_ii_stan_glm.r) 
 
-[stan_glm.stan](hhttps://raw.githubusercontent.com/mtalluto/BayesCourseIGB/master/code/4_ii_stan_glm.stan) (GLM in Stan)
+[stan_glm.stan](https://raw.githubusercontent.com/mtalluto/BayesCourseIGB/master/code/4_ii_stan_glm.stan) (GLM in Stan)
 
 
-<!--
-[regression_figs.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/3_iii_regression_figs.r) (Code for regression slides)
-
-
-
-### Day 5
-[laplace.r](https://github.com/mtalluto/BayesCourseIGB2018/blob/master/code/5_i_laplace.r) (Negative Binomial Regression)
-
--->
+### Monday 25
+[laplace.r](https://raw.githubusercontent.com/mtalluto/BayesCourseIGB/master/code/5_i_laplace.r) (Binomial GLM—Laplace Approximation)

@@ -8,8 +8,8 @@ trees <- readRDS("data/trees.rds")
 dat <- trees[grepl("TSU-CAN", species) & year == 2005 & n > 0]
 
 log_posterior <- function(pars, X) {
-	mulog <- pars[1] ## we need to ensure these parameters are positive
-	siglog <- exp(pars[2]) ## we need to ensure these parameters are positive
+	mulog <- pars[1] 
+	siglog <- exp(pars[2]) ## we need to ensure that sigma is positive
 	sum(dlnorm(X, mulog, siglog, log=TRUE)) + ## likelihood
 		dnorm(mulog, log(15.8), log(3), log=TRUE) + ## prior on the average of log(average temperature), based on global average temperature
 		dexp(siglog, 0.1, log=TRUE) # uninformative prior of standard deviation
