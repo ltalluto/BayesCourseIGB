@@ -36,7 +36,8 @@ inits <- c(rnorm(1, 0, 10), rnorm(1, 0, 5))
 # hessian = TRUE tells optim to give you the hessian matrix
 # system.time allows us to find out how long the whole procedure takes for comparison
 laplace_time <- system.time({
-	fit <- optim(inits, log_posterior, control = list(fnscale = -1), hessian = TRUE, data = dat)
+	fit <- optim(inits, log_posterior, control = list(fnscale = -1), 
+		hessian = TRUE, data = dat)
 	vcv_mat <- solve(-fit$hessian)
 	samples_laplace <- rmvnorm(5000, fit$par, vcv_mat)
 })

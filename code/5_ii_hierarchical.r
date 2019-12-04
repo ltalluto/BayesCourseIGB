@@ -2,8 +2,7 @@ library(data.table)
 library(mvtnorm)
 library(bayesplot)
 
-### note this script also requires results (samples_nb) from 3_iv_poisson.r
-
+options(mc.cores = parallel::detectCores())
 trees <- readRDS("data/trees.rds")
 dat <- trees[grepl("TSU-CAN", species) & n > 0]
 
@@ -106,7 +105,7 @@ licol <- "#bf812d"
 interval <- apply(probs, 2, quantile, c(0.05, 0.95))
 lines(temp_pr, colMeans(probs), col=licol, lwd=4)
 polygon(c(temp_pr, rev(temp_pr)), c(interval[1,], rev(interval[2,])), 
-	border=NA, col=paste0(linecolor[2], "55"))
+	border=NA, col=paste0(licol, "55"))
 
 
 ## show two extremes

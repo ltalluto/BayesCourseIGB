@@ -26,8 +26,8 @@ model {
 	intercepts ~ normal(int_mu, int_sd);
 	slopes ~ normal(slope_mu, slope_sd);
 
-	# hyperpriors
-	# these are quite vague, as it is hard to be sure what makes sense
+	// hyperpriors
+	// these are quite vague, as it is hard to be sure what makes sense
 	int_mu ~ normal(0, 20);
 	slope_mu ~ normal(0, 20);
 	int_sd ~ normal(0, 20);
